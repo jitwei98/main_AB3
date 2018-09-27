@@ -59,7 +59,11 @@ public class Phone implements Printable {
     }
 
     @Override
-    public String getPrintableString(Printable... printables) {
-        return FIELD_PREFIX + value + '\n';
+    public String getPrintableString(boolean hidePrivate) {
+        String printableString = "";
+        if (isPrivate && hidePrivate) {
+            printableString.concat(detailIsPrivate + FIELD_PREFIX + value + ' ');
+        }
+        return printableString;
     }
 }
