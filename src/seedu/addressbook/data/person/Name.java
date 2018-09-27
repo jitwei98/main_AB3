@@ -63,7 +63,7 @@ public class Name implements Printable {
     }
 
     @Override
-    public String getPrintableString(Printable... printables) {
-        return FIELD_PREFIX + fullName + '\n';
+    public String getPrintableString(boolean hidePrivate) {
+        return fullName + " ";
     }
 }
