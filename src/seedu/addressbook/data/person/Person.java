@@ -10,7 +10,7 @@ import seedu.addressbook.data.tag.Tag;
  * Represents a Person in the address book.
  * Guarantees: details are present and not null, field values are validated.
  */
-public class Person implements ReadOnlyPerson, Printable {
+public class Person implements ReadOnlyPerson {
 
     private Name name;
     private Phone phone;
@@ -87,16 +87,4 @@ public class Person implements ReadOnlyPerson, Printable {
         return getAsTextShowAll();
     }
 
-    /**
-     * Returns a concatenated version of the printable strings of each object.
-     */
-    @Override
-    public String getPrintableString(Printable... printables) {
-        String result = "";
-        for (Printable object : printables) {
-            String printableString = object.getPrintableString();
-            result.concat(printableString);
-        }
-        return result;
-    }
 }
