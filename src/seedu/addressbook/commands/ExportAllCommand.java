@@ -6,7 +6,11 @@ package seedu.addressbook.commands;
 public class ExportAllCommand extends Command {
     public static final String COMMAND_WORD = "exportall";
 
-    public ExportAllCommand() throws Exception {
+    public ExportAllCommand() {
+    }
+
+    @Override
+    public ExportAllCommand execute() throws Exception {
         throw new Exception();
     }
 }
