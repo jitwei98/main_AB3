@@ -14,5 +14,5 @@ public class ExportAllCommandTest {
         thrown.expect(Exception.class);
         new ExportAllCommand();
     }
-    
+
 }
